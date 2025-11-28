@@ -23,8 +23,8 @@ const plans = [
   },
   {
     name: "PLAN MARCA SEGURA A&C PRO",
-    price: "$339.000",
-    originalPrice: "$449.000",
+    price: "$450.000",
+    originalPrice: "$599.000",
     description: "Protección avanzada para marcas que ofrecen productos + servicios, tiendas online o negocios en crecimiento.",
     features: [
       "Registro mas protegido de tu marca en 2 clases",
@@ -126,7 +126,7 @@ const faqs = [
         </div>
         <div>
           <p className="font-bold text-primary">
-            🟪 Plan Marca Segura Pro – Oferta $339.000 (precio normal $449.000)
+            🟪 Plan Marca Segura Pro – Oferta $450.000 (precio normal $599.000)
           </p>
           <ul className="list-disc pl-4 space-y-1 mt-1">
             <li>Solicitud en 2 clases</li>
