@@ -23,7 +23,7 @@ const plans = [
   },
   {
     name: "PLAN MARCA SEGURA A&C PRO",
-    price: "$599.000",
+    price: "$339.000",
     originalPrice: "$449.000",
     description: "Protección avanzada para marcas que ofrecen productos + servicios, tiendas online o negocios en crecimiento.",
     features: [
@@ -43,24 +43,178 @@ const plans = [
 
 const faqs = [
   {
-    question: "¿Qué es una clase en el registro de marca?",
-    answer:
-      "Las clases son categorías que definen qué productos o servicios protege tu marca. Por ejemplo, la clase 25 es para ropa y la 35 para comercialización. Si vendes y además tienes tienda, podrías necesitar ambas.",
+    question: "¿Qué incluye el servicio de registro de marca?",
+    answer: (
+      <div className="space-y-2">
+        <p>
+          Incluye la presentación, seguimiento y tramitación completa de tu solicitud ante INAPI. Realizamos:
+        </p>
+        <ul className="list-disc pl-4 space-y-1">
+          <li>Revisión previa de registrabilidad</li>
+          <li>Sugerencia de clases según tu rubro</li>
+          <li>Redacción y presentación de la solicitud</li>
+          <li>Seguimiento de todas las etapas</li>
+          <li>Gestión de observaciones formales</li>
+          <li>Acompañamiento hasta obtener resolución final</li>
+        </ul>
+        <p className="text-sm italic">
+          No incluye defensa legal, honorarios de abogados ni simulación de oposiciones.
+        </p>
+      </div>
+    ),
   },
   {
-    question: "¿Cuánto tiempo demora el proceso?",
-    answer:
-      "El proceso en INAPI suele tomar entre 4 a 6 meses si no hay oposiciones. Nosotros nos encargamos de todo el seguimiento para que no tengas que preocuparte.",
+    question: "¿Los planes incluyen los pagos y tasas de INAPI?",
+    answer: (
+      <div className="space-y-2">
+        <p>
+          <strong>No.</strong> Las tasas oficiales deben ser pagadas directamente por el cliente.
+        </p>
+        <p>AyC Consultores gestiona el trámite, pero los costos oficiales los cubre el solicitante.</p>
+      </div>
+    ),
   },
   {
-    question: "¿El pago es único?",
-    answer:
-      "Sí, nuestros planes son 'todo incluido'. Cubren honorarios, tasas de INAPI y publicación en el Diario Oficial. No tendrás sorpresas ni cobros adicionales para el registro.",
+    question: "¿Cuánto cobra INAPI por registrar una marca?",
+    answer: (
+      <div className="space-y-3">
+        <p>Las tasas se pagan por clase e incluyen dos momentos:</p>
+        <div>
+          <p className="font-semibold">🔹 1º Pago inicial:</p>
+          <p>1 UTM por cada clase</p>
+          <p className="text-sm text-muted-foreground">
+            Permite ingresar la solicitud y obtener un número de expediente.
+          </p>
+        </div>
+        <div>
+          <p className="font-semibold">🔹 2º Pago final (solo si INAPI concede el registro):</p>
+          <p>2 UTM por cada clase</p>
+          <p className="text-sm text-muted-foreground">
+            Se paga para que INAPI emita el registro definitivo.
+          </p>
+        </div>
+      </div>
+    ),
   },
   {
-    question: "¿Qué pasa si rechazan mi marca?",
-    answer:
-      "Realizamos un análisis de factibilidad previo para minimizar este riesgo. Si aun así hay observaciones, nuestros planes incluyen la defensa y correcciones necesarias según el alcance del servicio contratado.",
+    question: "¿Cuándo debo pagar estas tasas?",
+    answer: (
+      <div className="space-y-3">
+        <div>
+          <p className="font-semibold">1) Al inicio del proceso:</p>
+          <p>Se paga 1 UTM por clase para entrar a trámite.</p>
+        </div>
+        <div>
+          <p className="font-semibold">2) Al finalizar (cuando la marca es concedida):</p>
+          <p>Se pagan 2 UTM por clase para emitir el registro.</p>
+        </div>
+        <p>AyC te guía en cada etapa del proceso.</p>
+      </div>
+    ),
+  },
+  {
+    question: "¿Cuál es la diferencia entre los planes disponibles?",
+    answer: (
+      <div className="space-y-4">
+        <div>
+          <p className="font-bold text-primary">🟦 Plan Marca Segura – $299.000</p>
+          <ul className="list-disc pl-4 space-y-1 mt-1">
+            <li>Solicitud en 1 clase</li>
+            <li>Presentación + seguimiento + tramitación</li>
+            <li>Ideal para marcas con un solo rubro</li>
+          </ul>
+        </div>
+        <div>
+          <p className="font-bold text-primary">
+            🟪 Plan Marca Segura Pro – Oferta $339.000 (precio normal $449.000)
+          </p>
+          <ul className="list-disc pl-4 space-y-1 mt-1">
+            <li>Solicitud en 2 clases</li>
+            <li>Mayor nivel de protección</li>
+            <li>Perfecto para negocios con más de un rubro o categoría</li>
+          </ul>
+        </div>
+        <p className="text-sm italic">Tasas oficiales de INAPI no incluidas.</p>
+      </div>
+    ),
+  },
+  {
+    question: "¿El servicio incluye abogado o defensa legal?",
+    answer: (
+      <div className="space-y-2">
+        <p>
+          <strong>No.</strong> Los planes contemplan la tramitación administrativa ante INAPI.
+        </p>
+        <p>
+          Cualquier defensa u oposición debe ser tratada con un abogado externo según necesidad.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "¿Cuánto demora registrar una marca en Chile?",
+    answer: (
+      <div className="space-y-2">
+        <p>
+          Entre 6 y 10 meses en promedio, dependiendo de las etapas de revisión y publicación.
+        </p>
+        <p>Realizamos seguimiento continuo para avanzar sin retrasos.</p>
+      </div>
+    ),
+  },
+  {
+    question: "¿Puedo pagar con tarjeta de crédito?",
+    answer: (
+      <div>
+        <p>
+          <strong>Sí.</strong> Los pagos con tarjeta estarán habilitados durante la próxima semana.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "¿Qué pasa si mi marca recibe observaciones?",
+    answer: (
+      <div className="space-y-2">
+        <p>Las observaciones formales simples se gestionan dentro del servicio.</p>
+        <p>
+          Si la observación es compleja o existe oposición, te informaremos para que puedas optar por asesoría legal externa.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "¿Cómo sabré en qué etapa va mi solicitud?",
+    answer: (
+      <p>
+        AyC Consultores realiza seguimiento activo y te mantiene informado del estado de tu expediente en cada fase del proceso.
+      </p>
+    ),
+  },
+  {
+    question: "¿Qué necesito para iniciar?",
+    answer: (
+      <div className="space-y-2">
+        <p>Solo debes enviarnos:</p>
+        <ul className="list-disc pl-4 space-y-1">
+          <li>Nombre de tu marca</li>
+          <li>Rubro o actividad</li>
+          <li>Breve descripción del uso</li>
+          <li>Datos del titular (persona o empresa)</li>
+        </ul>
+        <p>Nosotros analizamos las clases y te guiamos en la mejor opción.</p>
+      </div>
+    ),
+  },
+  {
+    question: "¿Puedo registrar mi marca en más de dos clases?",
+    answer: (
+      <div className="space-y-2">
+        <p>
+          <strong>Sí.</strong> Las clases adicionales se cotizan de manera independiente e implican pagar nuevamente las tasas oficiales (1 UTM inicial + 2 UTM finales por clase).
+        </p>
+      </div>
+    ),
   },
 ]
 
